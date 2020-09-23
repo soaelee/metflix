@@ -57,7 +57,7 @@ img{
     height: 100%;
     z-index: 1;
     background: rgba(0,0,0,0.6);
-    box-shadow: inset 120px 100px 250px #000000, inset -120px 100px 250px #000000;
+    box-shadow: inset 120px 100px 250px #000000, inset -120px -120px 250px #000000;
 }
 
 /* Showcase - top */
@@ -213,6 +213,33 @@ img{
     background: #222;
     color: #fff;
 }
+
+/* Footer */
+
+.footer{
+    max-width: 75%;
+    margin: 1rem auto;
+    overflow: auto;
+}
+
+.footer, .footer a{
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.footer p{
+    margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+.footer li{
+    line-height: 1.9;
+}
 /* Container */
 
 .container{
@@ -279,4 +306,75 @@ img{
     font-size: 1rem;
     padding: 0.8rem 1.3rem;
     text-transform: uppercase;
+}
+
+@media screen and (max-width: 960px){
+    .showcase{
+        height: 70vh;
+    }
+
+    .hide-sm{
+        display: none;
+    }
+
+    .showcase-top img{
+        top: 30%;
+        left: 5%;
+        transform: translate(0);
+    }
+
+    .showcase-content h1{
+        font-size: 3.7rem;
+        line-height: 1;
+    }
+
+    .showcase-content p{
+        font-size: 1.5rem;
+    }
+
+    #tab-1-content .tab-1-content-inner{
+        display: block;
+        text-align: center;
+    }
+    
+    .tab-1-content-inner img{
+        margin-top: 2rem;
+    }
+
+    #tab-2-content .tab-2-content-top{
+        display: block;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    #tab-2-content .tab-2-content-bottom{
+        display: block;
+        text-align: center;
+    }
+    
+    .tab-2-content-bottom > div{
+        margin-bottom: 2rem;
+    }
+
+    .btn-xl{
+        font-size: 1.5rem;
+        padding: 1.4rem 2rem;
+    }
+
+    .text-xl{
+        font-size: 1.5rem;
+    }
+    .text-lg{
+        font-size: 1.3rem;
+    }
+    .text-md{
+        font-size: 1rem;
+    }
+
+    .footer .footer-cols{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .showcase::after{
+        box-shadow: inset 80px 80px 250px #000000, inset -80px -80px 250px #000000;
+    }
 }
